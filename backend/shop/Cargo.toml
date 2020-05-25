@@ -1,0 +1,17 @@
+[package]
+name = "shop"
+version = "0.1.0"
+#authors = ["monkeycoderz <jon@tsp.io>"]
+edition = "2018"
+
+[[bin]] # Bin to run the HelloWorld gRPC server
+name = "test-server"
+path = "src/server.rs"
+
+[dependencies]
+tonic = "0.2"
+prost = "0.6"
+tokio = { version = "0.2", features = ["macros"] }
+
+[build-dependencies]
+tonic-build = "0.2"
