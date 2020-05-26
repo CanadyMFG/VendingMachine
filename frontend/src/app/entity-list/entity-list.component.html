@@ -9,7 +9,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let entity of category.Entities">
-            <td><button class="btn btn-primary" [routerLink]="['/entity', entity._id]">{{ entity?.name }}</button></td>
+            <td><button class="btn btn-dark btn-block" [routerLink]="['/entity', entity._id]">{{ entity?.name }}</button></td>
             <td>{{ entity?.quantity }}</td>
           </tr>
         </tbody>
