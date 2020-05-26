@@ -9,7 +9,14 @@ export class CategoriesComponent implements OnInit {
 
   constructor() { }
 
+  categories = [[{name: "Drills"}, {name: "Endmills"}, {name: "Bits"}],
+                [{name: "Steel"}, {name: "Tools"}, {name: "Alum"}],
+                [{name: "Brass"}, {name: "AmigoMan"}, {name: "amigo"}],
+              ];
+
   ngOnInit(): void {
+
+
   }
 
 }

@@ -1,21 +1,7 @@
 <div class="container-fluid">
 
-            <div class="row mt-5">
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
+            <div class="row mt-5" *ngFor="let category of categories">
+                <div class="col text-center" *ngFor="let button of category"><button class="btn btn-primary btn-xlarge" type="submit">{{button.name}}</button></div>
             </div>
-            <div class="row pt-5">
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-            </div>
-            <div class="row pt-5">
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-                <div class="col text-center"><button class="btn btn-primary btn-xlarge" type="submit">Button</button></div>
-            </div>
+
 </div>
