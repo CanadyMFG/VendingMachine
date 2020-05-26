@@ -1,2 +1,17 @@
-<h1>Entities in {{ category.name }}</h1>
-<p *ngFor="let entity of category.Entities"> {{ entity?.name }}  |  {{ entity?.quantity }}</p>
+<div class="container">
+    <h1>Entities in {{ category.name }}</h1>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entity of category.Entities">
+            <td><button class="btn btn-primary" [routerLink]="['/entity', entity._id]">{{ entity?.name }}</button></td>
+            <td>{{ entity?.quantity }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

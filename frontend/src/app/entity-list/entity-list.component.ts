@@ -17,7 +17,6 @@ export class EntityListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.category);
     
   }
 
