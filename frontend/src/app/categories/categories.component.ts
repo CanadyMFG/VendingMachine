@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CategoryService } from '../_service/category.service'
+import { Category } from '../_model/category.model';
+
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
@@ -7,15 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
-  constructor() { }
+  categories: Category[];
+  newCategories = [];
+  constructor(private categoryService: CategoryService) { }
 
-  categories = [[{name: "Drills"}, {name: "Endmills"}, {name: "Bits"}],
-                [{name: "Steel"}, {name: "Tools"}, {name: "Alum"}],
-                [{name: "Brass"}, {name: "AmigoMan"}, {name: "amigo"}],
-              ];
 
   ngOnInit(): void {
-
+    this.categories = this.categoryService.getCategories();
+    
+    const size = 4;
+    for(let i=0; i<this.categories.length; i+=size) {
+      this.newCategories.push(this.categories.slice(i, i+size))
+    }
 
   }
 
