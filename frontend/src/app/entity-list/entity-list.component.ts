@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-entity-list',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entity-list.component.css']
 })
 export class EntityListComponent implements OnInit {
-
-  constructor() { }
+  id:any;
+  constructor(private route: ActivatedRoute) { 
+    this.route.params.subscribe( params => this.id = params.id );
+  }
 
   ngOnInit(): void {
   }
