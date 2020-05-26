@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import { ActivatedRoute } from "@angular/router";
+import { CategoryService } from '../_service/category.service';
+import { Category } from '../_model/category.model';
 
 @Component({
   selector: 'app-entity-list',
@@ -8,11 +10,15 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class EntityListComponent implements OnInit {
   id:any;
-  constructor(private route: ActivatedRoute) { 
+  category: Category;
+  constructor(private route: ActivatedRoute, private categoryService: CategoryService) { 
     this.route.params.subscribe( params => this.id = params.id );
+    this.category = categoryService.getCategoryByID(this.id);
   }
 
   ngOnInit(): void {
+    console.log(this.category);
+    
   }
 
 }
