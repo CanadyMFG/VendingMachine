@@ -1,5 +1,6 @@
-<div class="container-fluid">
-            <div class="row mt-5" *ngFor="let category of newCategories">
-                <div class="col text-center" *ngFor="let button of category"><button class="btn btn-info btn-block btn-xlarge" type="submit" [routerLink]="['/entity-list', button._id]" >{{button.name}}</button></div>
-            </div>
+<div class="container-fluid pt-3 color">
+    <h1 class="text-center display-1">Categories</h1>
+    <div class="row my-5" *ngFor="let category of newCategories">
+        <div class="col text-center" *ngFor="let button of category"><button class="btn btn-info btn-block btn-xlarge" type="submit" [routerLink]="['/entity-list', button._id]" >{{button.name}}</button></div>
+    </div>
 </div>
