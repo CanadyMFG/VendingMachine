@@ -1,1 +1,30 @@
-<h1>ID: {{ id }}</h1>
+
+<div class="container">
+    <div class="card mt-5">
+        <h5 class="card-header">Checking out {{ entity.name }}</h5>
+        <div class="card-body">
+            <h1 class="text-center">{{ entity.name }}</h1>
+            <img src="https://www.tooled-up.com/artwork/prodzoom/DEW21021594.jpg?w=1600&h=1600&404=default" class="rounded mx-auto d-block img-thumbnail" alt="..." width="300px">
+            <div class="row">
+                <div class="col-6 offset-3">
+                    <table class="table table-bordered mt-3">
+                        <tbody>
+                          <tr>
+                            <td><span class="font-weight-bold">Some info:</span> some answer</td>
+                            <td><span class="font-weight-bold">Some Warning:</span> Some more warnings</td>
+                          </tr>
+                          <tr>
+                            <td><span class="font-weight-bold">Quantity:</span> 2</td>
+                            <td><span class="font-weight-bold">Use when:</span> idk whenever</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse">
+              <!-- redirect to login page, log user out -->
+                <div class="p-2"><button class="btn btn-success btn-xlarge" [routerLink]="['/login']">Checkout</button></div>
+              </div>
+        </div>
+        </div>
+</div>

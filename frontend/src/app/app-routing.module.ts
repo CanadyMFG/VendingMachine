@@ -7,11 +7,11 @@ import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  {path:  "", pathMatch:  "full",redirectTo:  "home"},
   {path: "home", component: CategoriesComponent},
   {path: "entity/:id", component: EntityComponent},
   {path: "entity-list/:id", component: EntityListComponent},
-  {path: "login", component: LoginComponent}
+  {path: "login", component: LoginComponent},
+  {path:  "**", pathMatch:  "full",redirectTo:  "login"},
 ];
 
 @NgModule({
